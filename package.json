@@ -1,0 +1,14 @@
+{
+  "name": "@ryanburnette/remove-google-oidc-query-params",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/remove-google-oidc-query-params.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Burnette <ryan.burnette@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@ryanburnette/qurl": "^1.0.1"
+  }
+}
