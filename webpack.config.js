@@ -1,9 +1,7 @@
-'use strict';
-
 const path = require('path');
 
 module.exports = {
-  entry: './remove-google-oidc-query-params.js',
+  entry: './index.mjs',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'remove-google-oidc-query-params.js',
@@ -11,5 +9,6 @@ module.exports = {
       name: 'removeGoogleOidcQueryParams',
       type: 'umd'
     }
-  }
+  },
+  mode: 'production'
 };

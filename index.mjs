@@ -1,5 +1,3 @@
-'use strict';
-
 import Qurl from '@ryanburnette/qurl';
 
 const _URL = new Qurl();
@@ -22,8 +20,17 @@ function googleOidcQueryParamsArePresent(opts) {
 }
 
 function _removeGoogleOidcQueryParams(opts) {
+  // remove applicable search params
   GOOGLE_PARAMS.forEach(function (k) {
     // console.log(k);
     _URL.remove(k);
   });
+  // if we're left with just a ? in the address with no params, remove it
+  if (window.location.search === '' && window.location.href.endsWith('?')) {
+    window.history.replaceState(
+      null,
+      document.title,
+      window.location.href.replace('?', '')
+    );
+  }
 }
